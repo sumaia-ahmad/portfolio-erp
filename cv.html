@@ -14,13 +14,13 @@
 
         @page {
             size: A4;
-            margin: 14mm 16mm;
+            margin: 10mm 14mm;
         }
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 10.5pt;
-            line-height: 1.45;
+            font-size: 9.6pt;
+            line-height: 1.32;
             color: #000000;
             background: #ffffff;
             max-width: 210mm;
@@ -34,21 +34,21 @@
 
         .header {
             text-align: center;
-            margin-bottom: 16px;
-            padding-bottom: 12px;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
             border-bottom: 2px solid #000000;
         }
 
         .name {
-            font-size: 22pt;
+            font-size: 20pt;
             font-weight: bold;
-            margin-bottom: 6px;
+            margin-bottom: 2px;
             text-transform: uppercase;
         }
 
         .title {
-            font-size: 12pt;
-            margin-bottom: 8px;
+            font-size: 11pt;
+            margin-bottom: 4px;
             font-weight: bold;
         }
 
@@ -58,20 +58,27 @@
         }
 
         .section {
-            margin-bottom: 14px;
+            margin-bottom: 9px;
         }
 
         .section-title {
-            font-size: 12pt;
+            font-size: 11pt;
             font-weight: bold;
             text-transform: uppercase;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             padding-bottom: 3px;
             border-bottom: 1px solid #000000;
         }
 
         .content {
-            margin-bottom: 10px;
+            margin-bottom: 6px;
+        }
+
+        /* Title and place on the left, dates on the right, in one line */
+        .entry-head {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
         }
 
         .job-title {
@@ -80,7 +87,7 @@
 
         .company {
             font-style: italic;
-            font-size: 10pt;
+            font-size: 9.6pt;
         }
 
         .date {
@@ -89,16 +96,25 @@
         }
 
         ul {
-            margin-left: 18px;
-            margin-top: 4px;
+            margin-left: 16px;
+            margin-top: 2px;
         }
 
         li {
-            margin-bottom: 2px;
+            margin-bottom: 1px;
+        }
+
+        .two-cols {
+            display: flex;
+            gap: 28px;
+        }
+
+        .two-cols > .section:first-child {
+            flex: 1;
         }
 
         .skill-category {
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
 
         .content,
@@ -126,34 +142,36 @@
     <div class="section">
         <div class="section-title">Professional Summary</div>
         <p>
-            Software Engineering graduate (2025). Built a complete order, purchasing, inventory and reporting system
-            for my own handmade candle business, covering requirements, database design, development and testing.
-            Strong interest in business systems, databases and SQL. Looking for an entry-level role as a functional
-            consultant or junior developer.
+            Software Engineering graduate (2025). Built a complete order, purchasing, inventory and reporting system for
+            my own handmade candle business, covering requirements, database design, development and testing. Strong
+            interest in business systems, databases and SQL; looking for an entry-level functional consultant or junior
+            developer role.
         </p>
     </div>
 
     <div class="section">
         <div class="section-title">Education</div>
         <div class="content">
-            <div class="job-title">Bachelor of Software Engineering</div>
-            <div class="company">Syrian Private University, Damascus, Syria</div>
-            <div class="date">Graduated: 2025</div>
+            <div class="entry-head">
+                <div><span class="job-title">Bachelor of Software Engineering</span> · <span class="company">Syrian Private University, Damascus, Syria</span></div>
+                <div class="date">Graduated: 2025</div>
+            </div>
         </div>
     </div>
 
     <div class="section">
         <div class="section-title">Main Project</div>
         <div class="content">
-            <div class="job-title">Deniz Studio · Order &amp; Inventory Management System (personal project)</div>
-            <div class="company">github.com/sumaia-ahmad/deniz-candles</div>
+            <div class="entry-head">
+                <div class="job-title">Deniz Studio · Order &amp; Inventory Management System (personal project)</div>
+                <div class="company">github.com/sumaia-ahmad/deniz-candles</div>
+            </div>
             <ul>
-                <li>Analysed the workflow of my own business and wrote a requirements document with numbered functional requirements and business rules.</li>
-                <li><strong>Sales and orders:</strong> online order requests, review and approval, deposits and order statuses from confirmation to delivery; each order line keeps its price at the time of sale.</li>
-                <li><strong>Payments and receivables:</strong> partial payments, cash on delivery, receipt verification and the remaining balance of every order.</li>
-                <li><strong>Purchasing and inventory:</strong> purchases update stock and the weighted average cost; every stock change is recorded as a movement; low-stock alerts; materials are consumed automatically when production starts.</li>
-                <li><strong>Costing and reports:</strong> bill of materials per product to calculate unit cost and margin; SQL reports for monthly sales, gross profit, best sellers and money owed by customers.</li>
-                <li>Built with Python, Flask, SQL (SQLite / PostgreSQL) and React; 83 automated tests, continuous integration with GitHub Actions, and Docker.</li>
+                <li>Analysed my business workflow and wrote a requirements document with functional requirements and business rules.</li>
+                <li><strong>Sales and payments:</strong> order approval, deposits, order statuses, partial payments and remaining balances.</li>
+                <li><strong>Purchasing and inventory:</strong> stock movements, weighted average cost, low-stock alerts, material consumption.</li>
+                <li><strong>Costing and reports:</strong> unit cost and margin per product; SQL reports for sales, profit and receivables.</li>
+                <li>Python, Flask, SQL (SQLite / PostgreSQL), React; 83 automated tests, GitHub Actions CI, Docker.</li>
             </ul>
         </div>
     </div>
@@ -161,9 +179,10 @@
     <div class="section">
         <div class="section-title">Professional Experience</div>
         <div class="content">
-            <div class="job-title">Computer Science Teacher</div>
-            <div class="company">Maali Al-Majd Private School, Damascus</div>
-            <div class="date">2023 - 2024</div>
+            <div class="entry-head">
+                <div><span class="job-title">Computer Science Teacher</span> · <span class="company">Maali Al-Majd Private School, Damascus</span></div>
+                <div class="date">2023 - 2024</div>
+            </div>
             <ul>
                 <li>Taught Computer Science and Information Technology courses to grades 10 and 11</li>
                 <li>Developed comprehensive lesson plans covering programming fundamentals and practical applications</li>
@@ -173,8 +192,10 @@
             </ul>
         </div>
         <div class="content">
-            <div class="job-title">Marketing Assistant</div>
-            <div class="date">2022 - 2023 (1 Year)</div>
+            <div class="entry-head">
+                <div class="job-title">Marketing Assistant</div>
+                <div class="date">2022 - 2023 (1 Year)</div>
+            </div>
             <ul>
                 <li>Assisted in marketing campaigns and product promotion</li>
                 <li>Gained basic experience in digital marketing and content creation</li>
@@ -185,9 +206,10 @@
     <div class="section">
         <div class="section-title">Volunteer Experience</div>
         <div class="content">
-            <div class="job-title">Community Volunteer</div>
-            <div class="company">Ammrha Foundation, Damascus</div>
-            <div class="date">2019 - 2024</div>
+            <div class="entry-head">
+                <div><span class="job-title">Community Volunteer</span> · <span class="company">Ammrha Foundation, Damascus</span></div>
+                <div class="date">2019 - 2024</div>
+            </div>
             <ul>
                 <li>Child Protection: Participated in initiatives focused on child safety, education, and welfare programs</li>
                 <li>Women Empowerment: Supported programs aimed at empowering women through education and skill development</li>
@@ -200,29 +222,24 @@
 
     <div class="section">
         <div class="section-title">Technical Skills</div>
-        <div class="skill-category"><strong>Databases &amp; SQL:</strong> SQL (joins, grouping, aggregates), Database Design, PostgreSQL, MySQL, SQLite, Database Migrations</div>
+        <div class="skill-category"><strong>Databases &amp; SQL:</strong> SQL (joins, aggregates), Database Design, PostgreSQL, MySQL, SQLite, Migrations</div>
         <div class="skill-category"><strong>Business Processes:</strong> Sales &amp; Orders, Payments &amp; Receivables, Purchasing, Inventory, Costing, Reporting</div>
-        <div class="skill-category"><strong>Programming:</strong> Python, JavaScript, HTML, CSS</div>
-        <div class="skill-category"><strong>Frameworks &amp; Libraries:</strong> Flask, SQLAlchemy, React, Pandas</div>
+        <div class="skill-category"><strong>Programming:</strong> Python, JavaScript, HTML, CSS · Flask, SQLAlchemy, React, Pandas</div>
         <div class="skill-category"><strong>Tools:</strong> Git, GitHub, GitHub Actions, Docker, pytest, VS Code</div>
     </div>
 
     <div class="section">
         <div class="section-title">Other Projects</div>
         <div class="content">
-            <div class="job-title">Supermarket Management API</div>
-            <p>Supermarket system with a Flask backend and MySQL database: REST API, CRUD operations, connection pooling and database schema design for inventory management.</p>
-        </div>
-        <div class="content">
-            <div class="job-title">Flask Todo API &amp; Frontend</div>
-            <p>RESTful API for task management with a responsive HTML, CSS and JavaScript frontend.</p>
-        </div>
-        <div class="content">
-            <div class="job-title">Data Processing Applications</div>
-            <p>Applications using Pandas for CSV data manipulation and analysis.</p>
+            <ul>
+                <li><strong>Supermarket Management API:</strong> Flask and MySQL REST API with CRUD operations and schema design for inventory.</li>
+                <li><strong>Flask Todo API &amp; Frontend:</strong> RESTful task management API with a responsive HTML, CSS and JavaScript frontend.</li>
+                <li><strong>Data Processing Applications:</strong> Pandas for CSV data manipulation and analysis.</li>
+            </ul>
         </div>
     </div>
 
+    <div class="two-cols">
     <div class="section">
         <div class="section-title">Soft Skills</div>
         <p>Teaching and Mentoring, Communication, Problem Solving, Team Collaboration, Time Management, Adaptability, Leadership, Community Engagement</p>
@@ -231,6 +248,7 @@
     <div class="section">
         <div class="section-title">Languages</div>
         <p><strong>Arabic:</strong> Native<br><strong>English:</strong> Intermediate</p>
+    </div>
     </div>
 </body>
 </html>
