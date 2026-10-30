@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumaia Ahmad · Software Engineer, Business Systems</title>
+    <meta name="description" content="Software engineer who builds and supports business systems: sales, purchasing, inventory, costing and reporting.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="container nav">
+            <a href="#top" class="logo">Sumaia Ahmad</a>
+            <ul class="nav-links">
+                <li><a href="#case-study">Case study</a></li>
+                <li><a href="#processes">Processes</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="top">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <p class="eyebrow">Software Engineer · Business Systems &amp; ERP</p>
+                <h1>I turn how a business really works into a system people can rely on.</h1>
+                <p class="lead">
+                    Software engineering graduate who runs a small business and built its complete order, purchasing,
+                    inventory and reporting system. I understand the workflow from the business side, and I know what
+                    happens in the database behind every screen.
+                </p>
+                <div class="cta">
+                    <a href="#case-study" class="btn btn-primary">See the case study</a>
+                    <a href="https://github.com/sumaia-ahmad/deniz-candles" class="btn btn-secondary" target="_blank" rel="noopener">Source code on GitHub</a>
+                </div>
+                <ul class="hero-facts">
+                    <li><strong>6</strong> business modules</li>
+                    <li><strong>83</strong> automated tests</li>
+                    <li><strong>1</strong> year training learners</li>
+                    <li>Arabic &amp; English</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Case study -->
+        <section id="case-study" class="section">
+            <div class="container">
+                <p class="eyebrow">Case study</p>
+                <h2>Deniz Studio · order &amp; inventory management system</h2>
+                <p class="section-lead">
+                    Deniz Studio is my handmade scented-candle business in Damascus. Orders used to live in Instagram
+                    messages: details got lost, deadlines slipped, customers kept asking about their orders, and I could
+                    not tell my real monthly profit. I analysed the workflow, wrote the requirements, and built the
+                    system that now runs the business.
+                </p>
+
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <h3>Analyse</h3>
+                        <p>Mapped the real workflow: how orders arrive, when a deposit is needed, how stock is used, where money gets lost.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">2</span>
+                        <h3>Specify</h3>
+                        <p>Wrote a requirements document with numbered functional requirements and business rules, and resolved open questions one by one.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <h3>Build &amp; test</h3>
+                        <p>Implemented every rule with automated tests, safe database migrations and continuous integration.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">4</span>
+                        <h3>Use &amp; improve</h3>
+                        <p>Use it daily with real orders, and refine it when the business changes (for example, new lead-time rules for large orders).</p>
+                    </div>
+                </div>
+
+                <h3 class="sub-title">What the system covers</h3>
+                <div class="modules">
+                    <article class="module">
+                        <h4>🧾 Sales &amp; orders</h4>
+                        <p>Online requests go through review: approve, reject with a reason, or propose a new date. Then deposit, confirmation, production, delivery.</p>
+                        <p class="note">Each order line keeps the price at the time of sale, so later price changes never alter past orders.</p>
+                    </article>
+                    <article class="module">
+                        <h4>💳 Payments &amp; receivables</h4>
+                        <p>Deposits, partial payments, transfers with receipts, cash held by the driver until handed over. Every order shows total, paid and remaining.</p>
+                    </article>
+                    <article class="module">
+                        <h4>🛒 Purchasing</h4>
+                        <p>Purchase documents with supplier and lines. Saving a purchase raises stock and updates each material's weighted average cost.</p>
+                    </article>
+                    <article class="module">
+                        <h4>📦 Inventory</h4>
+                        <p>Stock kept as a ledger of movements (purchase, consumption, return, adjustment), adjustments with a required reason, and low-stock alerts.</p>
+                        <p class="note">Starting production consumes the order's materials; cancelling returns them.</p>
+                    </article>
+                    <article class="module">
+                        <h4>🧮 Costing</h4>
+                        <p>A bill of materials for each product size gives the cost of one piece and its margin against the selling price.</p>
+                    </article>
+                    <article class="module">
+                        <h4>📊 Reporting</h4>
+                        <p>Monthly sales, material cost, gross profit, cash received and purchases; best sellers; sales by category; money still owed by customers.</p>
+                    </article>
+                </div>
+
+                <div class="highlights">
+                    <div>
+                        <h3 class="sub-title">Business rules, not just screens</h3>
+                        <ul class="check-list">
+                            <li><strong>Soft controls:</strong> confirming without the deposit or delivering an unpaid order shows a warning instead of blocking. The owner keeps the final decision.</li>
+                            <li><strong>Roles:</strong> an assistant can manage orders but cannot see costs, prices, payments or reports.</li>
+                            <li><strong>Traceability:</strong> every stock quantity can be traced to the movements that produced it.</li>
+                            <li><strong>Historical accuracy:</strong> prices and material costs are stored at the time of the transaction.</li>
+                        </ul>
+                    </div>
+                    <div class="code-card">
+                        <p class="code-title">Example: monthly sales report (SQL)</p>
+<pre><code>SELECT strftime('%Y-%m', o.event_date) AS month,
+       COUNT(DISTINCT o.id)            AS orders,
+       SUM(i.quantity)                 AS pieces,
+       SUM(i.unit_price * i.quantity)  AS sales
+FROM orders o
+JOIN order_items i ON i.order_id = o.id
+WHERE o.status IN ('confirmed', 'in_progress',
+                   'ready', 'delivered')
+GROUP BY month
+ORDER BY month DESC;</code></pre>
+                    </div>
+                </div>
+
+                <div class="gallery">
+                    <figure>
+                        <img src="images/admin.jpg" alt="Dashboard: products, sizes and prices" loading="lazy">
+                        <figcaption>Dashboard (English): products, sizes and prices</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/order.jpg" alt="Customer order form in Arabic" loading="lazy">
+                        <figcaption>Customer order form (Arabic)</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/home.jpg" alt="Customer website catalog" loading="lazy">
+                        <figcaption>Customer website and catalog</figcaption>
+                    </figure>
+                </div>
+
+                <p class="stack">
+                    <strong>Built with:</strong> Python, Flask, SQLAlchemy, SQL (SQLite / PostgreSQL), database migrations,
+                    React, pytest (83 tests), GitHub Actions, Docker.
+                </p>
+            </div>
+        </section>
+
+        <!-- Processes -->
+        <section id="processes" class="section section-alt">
+            <div class="container">
+                <p class="eyebrow">Business processes</p>
+                <h2>Processes I have designed and implemented</h2>
+                <div class="process-grid">
+                    <div class="process">
+                        <h3>Order to Cash</h3>
+                        <p class="flow">Request → Approval → Deposit → Confirmation → Production → Delivery → Payment</p>
+                        <p>Including partial payments, cash on delivery and outstanding balances.</p>
+                    </div>
+                    <div class="process">
+                        <h3>Procure to Stock</h3>
+                        <p class="flow">Purchase → Stock in → Average cost update</p>
+                        <p>Reversing a purchase entered by mistake takes its quantities out again.</p>
+                    </div>
+                    <div class="process">
+                        <h3>Inventory control</h3>
+                        <p class="flow">Movements ledger · Adjustments · Reorder alerts</p>
+                        <p>Automatic consumption by production and returns on cancellation.</p>
+                    </div>
+                    <div class="process">
+                        <h3>Costing &amp; margins</h3>
+                        <p class="flow">Bill of materials → Unit cost → Margin</p>
+                        <p>Weighted average costing, with cost frozen at the time of use.</p>
+                    </div>
+                    <div class="process">
+                        <h3>Management reporting</h3>
+                        <p class="flow">Sales · Gross profit · Cash in · Purchases · Receivables</p>
+                        <p>Aggregated with SQL (JOIN, GROUP BY, SUM) per month and per product.</p>
+                    </div>
+                    <div class="process">
+                        <h3>Data migration</h3>
+                        <p class="flow">Schema change → Migration → Verification</p>
+                        <p>Every database change applied through versioned migrations, without losing live data.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="container">
+                <p class="eyebrow">Skills</p>
+                <h2>What I bring to an implementation team</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Business analysis</h3>
+                        <ul>
+                            <li>Requirements gathering with business owners</li>
+                            <li>Business rules and process mapping</li>
+                            <li>Requirements documents (functional requirements and rules)</li>
+                            <li>Test scenarios and acceptance checks</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Data &amp; SQL</h3>
+                        <ul>
+                            <li>SQL: SELECT, JOIN, GROUP BY, aggregates, subqueries</li>
+                            <li>Relational database design</li>
+                            <li>PostgreSQL, MySQL, SQLite</li>
+                            <li>Data cleaning with Pandas (CSV, Excel-style data)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Systems</h3>
+                        <ul>
+                            <li>Python, Flask, REST APIs</li>
+                            <li>JavaScript, React, HTML, CSS</li>
+                            <li>Git &amp; GitHub, automated testing</li>
+                            <li>Docker basics, deployment</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>People</h3>
+                        <ul>
+                            <li>Training non-technical users step by step</li>
+                            <li>Writing clear guides and lesson plans</li>
+                            <li>Explaining technical issues in plain language</li>
+                            <li>Arabic (native), English (intermediate)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <p class="eyebrow">Experience</p>
+                <h2>Experience &amp; education</h2>
+                <div class="timeline">
+                    <div class="entry">
+                        <div class="entry-head">
+                            <h3>Founder &amp; system developer · Deniz Studio</h3>
+                            <span>Damascus · Present</span>
+                        </div>
+                        <ul>
+                            <li>Run a made-to-order handmade candle business: orders, suppliers, stock, pricing and customer payments.</li>
+                            <li>Analysed the business workflow and built the order, inventory and reporting system described above.</li>
+                        </ul>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-head">
+                            <h3>Computer Science Teacher · Maali Al-Majd Private School</h3>
+                            <span>Damascus · 2023 – 2024</span>
+                        </div>
+                        <ul>
+                            <li>Taught computer science and IT to grades 10 and 11, turning technical topics into clear, practical steps.</li>
+                            <li>Prepared lesson plans and learning material; tracked assessments and progress across several classes.</li>
+                        </ul>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-head">
+                            <h3>Marketing Assistant</h3>
+                            <span>2022 – 2023</span>
+                        </div>
+                        <ul>
+                            <li>Supported marketing campaigns, product promotion and digital content.</li>
+                        </ul>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-head">
+                            <h3>Community Volunteer · Ammrha Foundation</h3>
+                            <span>Damascus · 2019 – 2024</span>
+                        </div>
+                        <ul>
+                            <li>Took part in child protection, women empowerment, elder care and relief programs.</li>
+                        </ul>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-head">
+                            <h3>B.Sc. Software Engineering · Syrian Private University</h3>
+                            <span>Damascus · 2025</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Other projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <p class="eyebrow">More projects</p>
+                <h2>Related projects</h2>
+                <div class="project-grid">
+                    <article class="project">
+                        <h3>Supermarket Management API</h3>
+                        <p>Backend for a supermarket with products and inventory: database schema design, CRUD operations and a REST API on MySQL.</p>
+                        <p class="tags">Flask · MySQL · REST API</p>
+                        <a href="https://github.com/sumaia-ahmad/Supermarket-Management-System-" target="_blank" rel="noopener">View code →</a>
+                    </article>
+                    <article class="project">
+                        <h3>Data processing with Pandas</h3>
+                        <p>Reading, filtering and transforming CSV data, the same kind of work needed to prepare a client's data for import.</p>
+                        <p class="tags">Python · Pandas · CSV</p>
+                        <a href="https://github.com/sumaia-ahmad/US-States-Game-" target="_blank" rel="noopener">View code →</a>
+                    </article>
+                    <article class="project">
+                        <h3>Task Management API</h3>
+                        <p>REST API with a web frontend for creating and tracking tasks.</p>
+                        <p class="tags">Flask · JavaScript · REST API</p>
+                        <a href="https://github.com/sumaia-ahmad/flask-todo-api" target="_blank" rel="noopener">View code →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <h2>Let's talk</h2>
+                <p class="section-lead">Open to functional consultant, implementation and junior developer roles in Damascus.</p>
+                <div class="contact-grid">
+                    <a href="mailto:somayaahmad013@gmail.com" class="contact-item"><span>Email</span>somayaahmad013@gmail.com</a>
+                    <a href="tel:+963937799121" class="contact-item"><span>Phone</span>0937 799 121</a>
+                    <a href="https://github.com/sumaia-ahmad" class="contact-item" target="_blank" rel="noopener"><span>GitHub</span>github.com/sumaia-ahmad</a>
+                    <div class="contact-item"><span>Location</span>Damascus, Syria</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">Sumaia Ahmad</div>
+    </footer>
+</body>
+</html>
