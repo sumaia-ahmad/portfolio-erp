@@ -282,6 +282,41 @@ h3 {
     color: var(--muted);
 }
 
+/* Other projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+}
+
+.project p {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.project .tags {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.project > a,
+.project .links {
+    margin-top: auto;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
 /* Experience */
 .timeline {
     list-style: none;
@@ -347,7 +382,8 @@ h3 {
 /* Tablets */
 @media (max-width: 860px) {
     .modules,
-    .skills {
+    .skills,
+    .projects {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -379,6 +415,7 @@ h3 {
 
     .modules,
     .skills,
+    .projects,
     .shots,
     .details,
     .contact-grid {
