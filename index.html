@@ -3,188 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumaia Ahmad · Software Engineering Graduate</title>
-    <meta name="description" content="Software engineering graduate. Built an order, purchasing, inventory and reporting system for my own business.">
+    <title>Sumaia Ahmad · Software Engineer</title>
+    <meta name="description" content="Software Engineer building full-stack web applications and business management systems with Python, Flask, React and PostgreSQL.">
+    <meta name="theme-color" content="#FFFBFB">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sumaia Ahmad · Software Engineer">
+    <meta property="og:description" content="Full-stack web applications and business management systems with Python, Flask, React and PostgreSQL.">
+    <meta property="og:url" content="https://sumaia-ahmad.github.io/portfolio-erp/">
+    <meta property="og:image" content="https://sumaia-ahmad.github.io/portfolio-erp/images/products.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23A85062'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Arial' font-weight='700' font-size='34' fill='%23fff'%3ES%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="site-header">
-        <nav class="container nav">
-            <a href="#top" class="logo">Sumaia Ahmad</a>
+    <header>
+        <nav>
+            <div class="logo">Sumaia<span class="logo-dot">.</span></div>
             <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#project">Project</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="burger" role="button" tabindex="0" aria-label="Open menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
     </header>
 
-    <main id="top">
-        <section class="hero">
-            <div class="container">
-                <h1>Sumaia Ahmad</h1>
-                <p class="role">Software Engineering Graduate · Damascus, Syria</p>
-                <p class="lead">
-                    My hands-on experience comes from building an order, purchasing, inventory and reporting system
-                    for my own small business, from the first requirement to daily use.
-                </p>
-                <div class="cta">
-                    <a href="#project" class="btn btn-primary">View the project</a>
-                    <a href="Sumaia_Ahmad_CV.pdf" class="btn btn-secondary" download>Download CV</a>
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-glow" aria-hidden="true"></div>
+
+        <div class="hero-inner">
+            <div class="hero-content">
+                <p class="hero-greeting"><span class="wave">&#128075;</span> Hello, I'm</p>
+                <h1>Sumaia <span class="highlight">Ahmad</span></h1>
+                <p class="typing-text">Software Engineer | Full-Stack Developer</p>
+                <p class="hero-desc">I build web applications and business management systems that turn complex operations into simple, reliable digital workflows.</p>
+                <div class="cta-buttons">
+                    <a href="#project" class="btn btn-primary">View My Work</a>
+                    <a href="Sumaia_Ahmad_CV.pdf" class="btn btn-outline" download>Download CV</a>
+                    <a href="#contact" class="btn btn-ghost">Get In Touch</a>
                 </div>
             </div>
-        </section>
 
-        <section id="project" class="section">
-            <div class="container">
-                <p class="eyebrow">Main project</p>
-                <h2>Deniz Studio management system</h2>
-                <p class="section-lead">
-                    Deniz Studio is my handmade candle business. Orders, payments and stock were tracked in Instagram
-                    messages. I analysed the workflow, wrote the requirements and business rules, and built the
-                    system that now runs it.
-                </p>
+            <div class="hero-visual" aria-hidden="true">
+                <div class="code-window">
+                    <div class="code-window-bar">
+                        <span class="dot dot-1"></span><span class="dot dot-2"></span><span class="dot dot-3"></span>
+                        <span class="code-window-title">sumaia.py</span>
+                    </div>
+                    <pre class="code-window-body"><code id="hero-code"></code><span class="caret"></span></pre>
+                </div>
+                <span class="chip chip-1"><i></i>Python</span>
+                <span class="chip chip-2"><i></i>React</span>
+                <span class="chip chip-3"><i></i>PostgreSQL</span>
+                <span class="chip chip-4"><i></i>Docker</span>
+            </div>
+        </div>
+    </section>
 
-                <div class="modules">
-                    <div class="module">
-                        <h3>Sales &amp; payments</h3>
-                        <p>Order review and approval, deposits, order statuses, partial payments and remaining balances.</p>
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <p class="eyebrow">01 &middot; About</p>
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Building software that solves real problems</p>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a Software Engineering graduate from Damascus, Syria. I design and develop full-stack web applications and business management systems &mdash; from the frontend interface to the backend API to the database.</p>
+                    <p>My approach: understand the business problem first, then build the right solution. I care about clean architecture, maintainable code, and systems that still work six months after launch.</p>
+                </div>
+                <div class="about-cards">
+                    <div class="about-card">
+                        <div class="about-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                        <h3>Full-Stack Development</h3>
+                        <p>Python, Flask, React, JavaScript, HTML/CSS</p>
                     </div>
-                    <div class="module">
-                        <h3>Purchasing &amp; inventory</h3>
-                        <p>Purchases raise stock and update the weighted average cost; every change is recorded as a stock movement; low-stock alerts.</p>
+                    <div class="about-card">
+                        <div class="about-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></div>
+                        <h3>Database Design</h3>
+                        <p>PostgreSQL, MySQL, SQLAlchemy, Migrations</p>
                     </div>
-                    <div class="module">
-                        <h3>Costing</h3>
-                        <p>A bill of materials per product gives the cost of one piece and its margin.</p>
-                    </div>
-                    <div class="module">
-                        <h3>Reporting</h3>
-                        <p>Monthly sales, material cost, gross profit, cash received, purchases and receivables, built with SQL.</p>
+                    <div class="about-card">
+                        <div class="about-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+                        <h3>DevOps &amp; Testing</h3>
+                        <p>Docker, pytest, Git, GitHub Actions</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <figure class="shot shot-main">
-                    <a href="images/reports.jpg" target="_blank" rel="noopener"><img src="images/reports.jpg" alt="Reports page: monthly sales, material cost, gross profit, cash received and purchases"></a>
-                    <figcaption>Reports: monthly sales, material cost, gross profit, cash received and purchases</figcaption>
-                </figure>
-                <div class="shots">
-                    <figure class="shot">
-                        <a href="images/inventory.jpg" target="_blank" rel="noopener"><img src="images/inventory.jpg" alt="Inventory page with stock levels and a low-stock alert" loading="lazy"></a>
+    <!-- Main Project -->
+    <section id="project" class="project-section">
+        <div class="container">
+            <p class="eyebrow">02 &middot; Work</p>
+            <h2 class="section-title">Featured Project</h2>
+            <p class="section-subtitle">Designed, built and deployed from scratch</p>
+
+            <div class="project-hero-card">
+                <div class="project-header">
+                    <div>
+                        <h3>Deniz Studio</h3>
+                        <p class="project-tagline">Complete Business Management System</p>
+                    </div>
+                    <a href="https://github.com/sumaia-ahmad/deniz-candles" target="_blank" rel="noopener" class="btn btn-sm">View on GitHub &rarr;</a>
+                </div>
+                <p class="project-desc">Deniz Studio is my handmade candle business. Orders, payments and stock used to be tracked in Instagram messages. I analysed the workflow, wrote the business rules, and built the system that now runs it &mdash; a customer-facing website plus an admin dashboard.</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+                        <h4>Online Ordering</h4>
+                        <p>Customers browse candles by occasion, choose sizes and colors, and place custom orders with delivery scheduling.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+                        <h4>Payments</h4>
+                        <p>Deposits, partial payments, remaining balances and payment tracking per order.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+                        <h4>Inventory</h4>
+                        <p>Raw materials, stock movements, purchases and weighted-average cost tracking with low-stock alerts.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+                        <h4>Reports</h4>
+                        <p>Monthly sales, costs, profit, best sellers and receivables &mdash; all calculated with SQL from live data.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></div>
+                        <h4>Costing</h4>
+                        <p>Product recipes calculate the real cost per piece from raw materials, showing the profit margin on every size.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                        <h4>Security</h4>
+                        <p>Secure sessions, rate limiting, honeypot anti-spam, CSRF protection and role-based access.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Screenshots -->
+            <div class="screenshots">
+                <h3 class="screenshots-title">Screenshots</h3>
+                <div class="screenshots-grid">
+                    <figure class="screenshot">
+                        <a href="images/reports.jpg" target="_blank" rel="noopener"><img src="images/reports.jpg" alt="Reports page" loading="lazy"></a>
+                        <figcaption>Monthly reports: sales, costs, profit</figcaption>
+                    </figure>
+                    <figure class="screenshot">
+                        <a href="images/inventory.jpg" target="_blank" rel="noopener"><img src="images/inventory.jpg" alt="Inventory page" loading="lazy"></a>
                         <figcaption>Inventory with low-stock alerts</figcaption>
                     </figure>
-                    <figure class="shot">
-                        <a href="images/purchases.jpg" target="_blank" rel="noopener"><img src="images/purchases.jpg" alt="Purchases list by supplier" loading="lazy"></a>
+                    <figure class="screenshot">
+                        <a href="images/order-detail.jpg" target="_blank" rel="noopener"><img src="images/order-detail.jpg" alt="Order details" loading="lazy"></a>
+                        <figcaption>Order with payments and balance</figcaption>
+                    </figure>
+                    <figure class="screenshot">
+                        <a href="images/products.jpg" target="_blank" rel="noopener"><img src="images/products.jpg" alt="Products page" loading="lazy"></a>
+                        <figcaption>Products, cost per piece and margin</figcaption>
+                    </figure>
+                    <figure class="screenshot">
+                        <a href="images/purchases.jpg" target="_blank" rel="noopener"><img src="images/purchases.jpg" alt="Purchases page" loading="lazy"></a>
                         <figcaption>Purchases by supplier</figcaption>
-                    </figure>
-                    <figure class="shot">
-                        <a href="images/order-detail.jpg" target="_blank" rel="noopener"><img src="images/order-detail.jpg" alt="Order details with payments and remaining balance" loading="lazy"></a>
-                        <figcaption>Order with deposit, payments and balance</figcaption>
-                    </figure>
-                    <figure class="shot">
-                        <a href="images/products.jpg" target="_blank" rel="noopener"><img src="images/products.jpg" alt="Products with price, cost per piece and margin" loading="lazy"></a>
-                        <figcaption>Prices, cost per piece and margin</figcaption>
                     </figure>
                 </div>
                 <p class="note">Screenshots use sample data.</p>
+            </div>
 
-                <div class="details">
-                    <div>
-                        <h3>Business rules</h3>
-                        <ul class="rules">
-                            <li>Each order line keeps the price at the time of sale.</li>
-                            <li>Material cost is stored when used, so past profit never changes.</li>
-                            <li>Missing payments show a warning instead of blocking the owner.</li>
-                            <li>An assistant role manages orders without seeing costs or reports.</li>
-                        </ul>
-                    </div>
-                    <div class="code-card">
-                        <p class="code-title">Monthly sales report (SQL)</p>
-<pre><code>SELECT strftime('%Y-%m', o.event_date) AS month,
+            <!-- Tech & Business Rules -->
+            <div class="project-details">
+                <div class="detail-card">
+                    <h4>Technical Highlights</h4>
+                    <ul>
+                        <li>REST API with Python &amp; Flask (7 Blueprint modules)</li>
+                        <li>React frontend with responsive Arabic (RTL) layout</li>
+                        <li>PostgreSQL database: 16 tables with SQLAlchemy ORM</li>
+                        <li>Versioned schema migrations (Flask-Migrate)</li>
+                        <li>80 automated tests with pytest</li>
+                        <li>Dockerized deployment (Docker Compose)</li>
+                    </ul>
+                </div>
+                <div class="detail-card code-card">
+                    <h4>Monthly Sales Report (SQL)</h4>
+<pre><code>SELECT EXTRACT(YEAR  FROM o.event_date) AS year,
+       EXTRACT(MONTH FROM o.event_date) AS month,
        COUNT(DISTINCT o.id)           AS orders,
        SUM(i.unit_price * i.quantity) AS sales
 FROM orders o
 JOIN order_items i ON i.order_id = o.id
 WHERE o.status IN ('confirmed', 'in_progress',
                    'ready', 'delivered')
-GROUP BY month
-ORDER BY month DESC;</code></pre>
-                    </div>
-                </div>
-
-                <p class="stack">
-                    Built with Python, Flask, SQL (SQLite / PostgreSQL) and React; automated tests and Docker setup.
-                    <a href="https://github.com/sumaia-ahmad/deniz-candles" target="_blank" rel="noopener">Source code on GitHub →</a>
-                </p>
-            </div>
-        </section>
-
-        <section id="projects" class="section section-alt">
-            <div class="container">
-                <p class="eyebrow">Other project</p>
-                <div class="projects">
-                    <article class="project">
-                        <h3>Supermarket Management API</h3>
-                        <p>Products, categories and sales invoices with tax calculation, automatic stock reduction and sales blocked when stock is insufficient.</p>
-                        <p class="tags">Flask · MySQL · JavaScript</p>
-                        <a href="https://github.com/sumaia-ahmad/Supermarket-Management-System-" target="_blank" rel="noopener">Code →</a>
-                    </article>
+GROUP BY year, month
+ORDER BY year DESC, month DESC;</code></pre>
                 </div>
             </div>
-        </section>
 
-        <section id="skills" class="section">
-            <div class="container">
-                <p class="eyebrow">Skills</p>
-                <div class="skills">
-                    <div>
-                        <h3>Business processes</h3>
-                        <p>Sales &amp; orders, payments &amp; receivables, purchasing, inventory, costing, reporting</p>
+            <!-- Business Rules -->
+            <div class="business-rules">
+                <h4>Business Rules I Implemented</h4>
+                <div class="rules-grid">
+                    <div class="rule"><span class="rule-tag">BR-5</span> Each order line keeps the price at the time of sale (price snapshot)</div>
+                    <div class="rule"><span class="rule-tag">BR-1</span> Delivery fees are snapshot too &mdash; changing a zone's fee later won't touch past orders</div>
+                    <div class="rule"><span class="rule-tag">BR-9</span> Large orders (50+ pieces) automatically require extra preparation time</div>
+                    <div class="rule"><span class="rule-tag">WAC</span> Material cost uses weighted average cost, updated on every purchase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Projects -->
+    <section class="other-projects">
+        <div class="container">
+            <p class="eyebrow">03 &middot; More</p>
+            <h2 class="section-title">Other Projects</h2>
+            <div class="other-grid">
+                <article class="other-card">
+                    <div class="other-card-header">
+                        <span class="folder-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg></span>
+                        <a href="https://github.com/sumaia-ahmad/Supermarket-Management-System-" target="_blank" rel="noopener">Code &rarr;</a>
                     </div>
-                    <div>
-                        <h3>Databases &amp; SQL</h3>
-                        <p>SQL (joins, aggregates), database design, PostgreSQL, MySQL, SQLite, migrations</p>
+                    <h3>Supermarket Management API</h3>
+                    <p>Products, categories and sales invoices with tax calculation, automatic stock reduction and sales blocked when stock is insufficient.</p>
+                    <div class="other-tags">
+                        <span>Flask</span><span>MySQL</span><span>JavaScript</span><span>REST API</span>
                     </div>
-                    <div>
-                        <h3>Development</h3>
-                        <p>Python, Flask, REST APIs, Git &amp; GitHub</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <p class="eyebrow">04 &middot; Skills</p>
+            <h2 class="section-title">Skills &amp; Expertise</h2>
+            <p class="section-subtitle">What I work with every day</p>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span>Python</span><span>Flask</span><span>REST APIs</span><span>SQLAlchemy</span>
                     </div>
-                    <div>
-                        <h3>Communication</h3>
-                        <p>Teaching and mentoring, problem solving, teamwork · Arabic (native), English (intermediate)</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span>React</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></div>
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span>PostgreSQL</span><span>MySQL</span><span>SQL</span><span>Database Design</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <h3>Tools &amp; Practices</h3>
+                    <div class="skill-tags">
+                        <span>Docker</span><span>Git</span><span>pytest</span><span>GitHub Actions</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                    <h3>Business</h3>
+                    <div class="skill-tags">
+                        <span>Inventory Management</span><span>Requirements Analysis</span><span>Process Automation</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+                    <h3>Communication</h3>
+                    <div class="skill-tags">
+                        <span>Problem Solving</span><span>Teaching</span><span>Arabic (native)</span><span>English</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="experience" class="section">
-            <div class="container">
-                <p class="eyebrow">Education &amp; experience</p>
-                <ul class="timeline">
-                    <li><strong>B.Sc. Software Engineering</strong><span>Syrian Private University, Damascus</span><time>2025</time></li>
-                    <li><strong>Computer Science Teacher</strong><span>Maali Al-Majd Private School, Damascus</span><time>2023 – 2024</time></li>
-                    <li><strong>Marketing Assistant</strong><span></span><time>2022 – 2023</time></li>
-                    <li><strong>Community Volunteer</strong><span>Ammrha Foundation, Damascus</span><time>2019 – 2024</time></li>
-                </ul>
-                <p class="note">Full details are in the <a href="Sumaia_Ahmad_CV.pdf" download>CV</a>.</p>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact">
-            <div class="container">
-                <h2>Contact</h2>
-                <div class="contact-grid">
-                    <a href="mailto:somayaahmad013@gmail.com"><span>Email</span>somayaahmad013@gmail.com</a>
-                    <a href="tel:+963937799121"><span>Phone</span>0937 799 121</a>
-                    <a href="https://github.com/sumaia-ahmad" target="_blank" rel="noopener"><span>GitHub</span>github.com/sumaia-ahmad</a>
+    <!-- Experience -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <p class="eyebrow">05 &middot; Journey</p>
+            <h2 class="section-title">Education &amp; Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2026 &mdash; Present</span>
+                        <h3>Full-Stack Developer <span class="timeline-type">Self-employed</span></h3>
+                        <p>Deniz Studio &middot; Damascus, Syria</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025</span>
+                        <h3>B.Sc. Software Engineering</h3>
+                        <p>Syrian Private University (SPU), Damascus</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2023 &mdash; 2024</span>
+                        <h3>Computer Science Teacher</h3>
+                        <p>Maali Al-Majd Private School, Damascus</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 &mdash; 2023</span>
+                        <h3>Marketing Assistant</h3>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019 &mdash; 2024</span>
+                        <h3>Community Volunteer</h3>
+                        <p>Ammrha Foundation, Damascus</p>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+            <p class="note" style="text-align:center; margin-top:2rem;">Full details are in the <a href="Sumaia_Ahmad_CV.pdf" download>CV</a>.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <p class="eyebrow light">06 &middot; Contact</p>
+            <h2 class="section-title light">Let's Connect</h2>
+            <p class="section-subtitle light">Have a project or idea? I'd love to hear about it.</p>
+            <div class="contact-grid">
+                <a href="mailto:sumaia.yaser.ahmad77@gmail.com" class="contact-card">
+                    <span class="contact-emoji"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">sumaia.yaser.ahmad77@gmail.com</span>
+                </a>
+                <a href="https://github.com/sumaia-ahmad" target="_blank" rel="noopener" class="contact-card">
+                    <span class="contact-emoji"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span>
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-value">github.com/sumaia-ahmad</span>
+                </a>
+                <a href="https://www.linkedin.com/in/sumaia-ahmad" target="_blank" rel="noopener" class="contact-card">
+                    <span class="contact-emoji"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">linkedin.com/in/sumaia-ahmad</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Sumaia Ahmad. Built with care.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
